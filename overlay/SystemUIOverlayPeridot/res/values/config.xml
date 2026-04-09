@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+     
+     POCO F6 (peridot) - SystemUI Overlay (Performance Optimized)
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- Doze: does this device support STATE_DOZE?  -->
+    <bool name="doze_display_state_supported">true</bool>
+
+    <!-- Override value to use for proximity sensor.  -->
+    <string name="proximity_sensor_type" translatable="false">xiaomi.sensor.oem_pocket</string>
+
+    <!-- If using proximity_sensor_type, specifies a threshold value to distinguish near and
+         far break points. A sensor value less than this is considered "near". -->
+    <item name="proximity_sensor_threshold" translatable="false" format="float" type="dimen">5</item>
+
+    <!-- Should we vibrate on an icon animation of the shelf. This should only be active if the
+         vibrator is capable of subtle vibrations -->
+    <!-- POCO F6 TWEAK: Disabled to prevent micro-stutters when pulling down QS panel -->
+    <bool name="config_vibrateOnIconAnimation">false</bool>
+
+    <!-- Preferred refresh rate at keyguard, if supported by the display. Overrides
+         keyguardMaxRefreshRate. -->
+    <!-- POCO F6: Keep at 120Hz for smooth unlock animation -->
+    <integer name="config_keyguardRefreshRate">120</integer>
+
+    <!-- ============================================== -->
+    <!-- ADDITIONAL SystemUI PERFORMANCE TWEAKS        -->
+    <!-- ============================================== -->
+
+    <!-- Disable haptic feedback on back gesture (reduces micro-lag) -->
+    <bool name="config_backGestureHapticEnabled">false</bool>
+
+    <!-- Use faster animation scales in SystemUI -->
+    <bool name="config_useQuickAnimationScale">true</bool>
+
+    <!-- Disable blur effects on low-end devices (POCO F6 can handle it, 
+         but disabling saves GPU resources) -->
+    <!-- Uncomment if you want maximum smoothness at cost of visuals -->
+    <!-- <bool name="config_disableBlur">true</bool> -->
+
+    <!-- Reduce notification expansion animation duration -->
+    <integer name="config_notificationExpandDuration">150</integer>
+    <integer name="config_notificationCollapseDuration">100</integer>
+
+    <!-- Faster QS panel expansion -->
+    <integer name="config_quickSettingsExpandDuration">200</integer>
+    <integer name="config_quickSettingsCollapseDuration">150</integer>
+</resources>
