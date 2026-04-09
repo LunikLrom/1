@@ -1,0 +1,58 @@
+# Device
+ro.product.mod_device=peridot_global
+
+# QTI
+ro.vendor.qti.va_aosp.support=1
+
+# Media (исходные, всё правильно)
+media.stagefright.thumbnail.prefer_hw_codecs=true
+ro.media.recorder-max-base-layer-fps=60
+ro.media.xml_variant.profiles=_cliffs_v0
+
+# ==================================================
+# === POCO F6 PERFORMANCE ADDITIONS (System)     ===
+# ==================================================
+
+# Ускорение анимаций системы
+windowsmgr.max_events_per_sec=150
+ro.max.fling_velocity=12000
+ro.min.fling_velocity=8000
+view.scroll_friction=0.015
+
+# Отключение отправки логов и телеметрии
+profiler.force_disable_err_rpt=1
+profiler.force_disable_ulog=1
+persist.sys.ui.hw=1
+debug.performance.tuning=1
+
+# Оптимизация Dalvik VM
+dalvik.vm.checkjni=false
+dalvik.vm.dexopt-flags=m=y,v=n,o=v
+dalvik.vm.verify-bytecode=false
+dalvik.vm.execution-mode=int:fast
+
+# Тюнинг I/O и баз данных
+ro.config.hw_quickpoweron=true
+persist.sys.powerhal.interactive=1
+persist.sys.scrollingcache=4
+
+# Сетевые твики (TCP)
+net.tcp.buffersize.default=4096,87380,256960,4096,16384,256960
+net.tcp.buffersize.wifi=4096,87380,256960,4096,16384,256960
+net.tcp.buffersize.lte=4096,87380,256960,4096,16384,256960
+
+# Ускорение запуска приложений
+ro.config.hw_fast_dormancy=1
+pm.dexopt.first-boot=quicken
+pm.dexopt.boot=verify
+pm.dexopt.install=speed
+
+# Отключаем ненужные проверки безопасности для скорости
+ro.kernel.android.checkjni=0
+ro.kernel.checkjni=0
+
+# Фикс лагов при прокрутке
+ro.min_pointer_dur=8
+ro.sf.showfps=0
+debug.sf.showupdates=0
+debug.sf.showbackground=0

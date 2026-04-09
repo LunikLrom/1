@@ -1,0 +1,28 @@
+# Audio
+# Уменьшено с 30 до 3 секунд для снижения нагрузки на CPU
+# Короткие звуки теперь тоже идут через DSP-оффлоад
+audio.offload.min.duration.secs=3
+
+# Media
+# Глубокий анализ аудио-потока (улучшает совместимость кодеков)
+media.stagefright.audio.deep=true
+
+# ==================================================
+# === POCO F6 PERFORMANCE ADDITIONS (Product)    ===
+# ==================================================
+
+# Ускоряем запуск медиа-плееров
+media.stagefright.less-secure=true
+media.stagefright.use-awesome=false
+
+# Увеличиваем буфер для плавного воспроизведения видео
+media.stagefright.cache-size=2048
+media.stagefright.cache-params=2048/2048
+
+# Отключаем ненужные логи медиа-фреймворка
+media.stagefright.log-uri=false
+media.stagefright.log-mediaserver=false
+
+# Улучшаем отклик звука при касаниях
+ro.audio.silent=0
+persist.audio.fluence.voicecall=false
